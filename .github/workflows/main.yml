@@ -11,9 +11,9 @@ jobs:
       - name: Run a one line script
         run: echo Hello Raghav !
   get-the-files:
-      needs:
-        - build
-      runs-on: ubuntu-latest
-      steps:
-        - name: Running custom script
-        - run: ls -al
+    needs:
+      - build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Running custom script
+      - run: ls -al
