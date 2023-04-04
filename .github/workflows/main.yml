@@ -1,0 +1,20 @@
+on:
+  push:
+    branches:
+      main
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run a one line script
+        run: echo Hello Raghav !
+  get-the-files:
+      needs:
+        - build
+      runs-on: ubuntu-latest
+      steps:
+        - name: Running custom script
+        - run: |
+            ls -al
