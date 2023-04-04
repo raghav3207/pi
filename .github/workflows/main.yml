@@ -16,5 +16,4 @@ jobs:
       runs-on: ubuntu-latest
       steps:
         - name: Running custom script
-        - run: |
-            ls -al
+        - run: ls -al
